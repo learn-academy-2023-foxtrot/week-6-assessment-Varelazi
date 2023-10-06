@@ -14,16 +14,32 @@
 
 // a) Create a test with an expect statement using the variable provided.
 
-const hitchhikersCharacters = [
-  { name: "ford prefect", occupation: "a hitchhiker" },
-  { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
-  { name: "arthur dent", occupation: "a radio employee" }
-]
-// Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
+// describe("CapName", () => {
+  const hitchhikersCharacters = [
+    { name: "ford prefect", occupation: "a hitchhiker" },
+    { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
+    { name: "arthur dent", occupation: "a radio employee" }
+  ]
+//   it("Returns an array with names capitalized", () => {
+//     // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
+//     expect(CapName(hitchhikersCharacters)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
+//   })
+// })
+//GOODFAILURE ReferenceError: CapName is not defined
 
 // b) Create the function that makes the test pass.
-
 // Pseudo code:
+//Function Name: CapName
+//Input: Array of objects
+//Output: Array of strings
+//Process: Create your function that takes in a parameter of an array. Use .map to iterate through the array and also return an array. Return the value of each key:value using string interpolation.
+
+const CapName = (arr) => {
+  return arr.map((value) => {
+    return `${value.name} is ${value.occupation}`
+  })
+}
+console.log(CapName(hitchhikersCharacters))
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
 

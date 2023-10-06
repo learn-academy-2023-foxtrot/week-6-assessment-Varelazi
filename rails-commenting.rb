@@ -6,14 +6,14 @@
 
 # FILE: app/controller/blog_posts_controller.rb
 
-# ---1)
+# ---1) This is a controller called BlogPosts it inherits from a class called ApplicationController. This means that the BlogPosts will have access to all the methods and functionality in ApplicationController. Its purpose is to manage the routing of the application. The functionality is to control the interaction between the MVC.
 class BlogPostsController < ApplicationController
   def index
-    # ---2)
+    # ---2) Creates an instance variable that will store a list of ALL the data entries from inside of the model. 
     @posts = BlogPost.all
   end
 
-  # ---3)
+  # ---3) 
   def show
     @post = BlogPost.find(params[:id])
   end
